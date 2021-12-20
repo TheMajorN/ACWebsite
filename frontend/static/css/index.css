@@ -1,0 +1,91 @@
+body {
+    --nav-width: 200px;
+    margin: 0 0 0 var(--nav-width);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background: black;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    background: #5a0000;
+    transition: width 0.2s;
+}
+
+.nav--collapsed {
+    width: var(--nav-icon-width );
+}
+
+.nav--collapsed .nav__label {
+    display: none;
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #eeeeee;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s;
+}
+
+.nav__icon-container {
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav__border {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: var(--nav-border-width);
+    height: inherit;
+    background-color: #380000;
+    transition: background-color 0.2s;
+    cursor: ew-resize;
+}
+
+.nav__border:hover {
+    background-color: #270000;
+}
+
+#app {
+    margin: 2em;
+    line-height: 1.5;
+    font-weight: 500;
+    color: whitesmoke;
+}
+
+a {
+    color: #009579;
+}
+
+:root {
+    --nav-icon-width: 50px;
+    --nav-border-width: 8px;
+}
+
+.page-container {
+    height: inherit;
+    display: flex;
+}
+
+.main {
+    height: inherit;
+    padding: 0;
+    padding-left: var(--nav-border-width);
+    overflow-y: auto;
+}

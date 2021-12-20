@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethon Collective</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="nav">
+            <div class="nav__border"></div>
+            <a href="/" class="nav__link" data-link>
+                <div class="nav__icon-container">
+                    <!--Image here--> 
+                </div>
+                <span class="nav__label">Home</span>
+            </a>
+            <a href="/download" class="nav__link" data-link>
+                <div class="nav__icon-container">
+                    <!--Image here--> 
+                </div>
+                <span class="nav__label">Download</span>
+            </a>
+            <a href="/about-us" class="nav__link" data-link>
+                <div class="nav__icon-container">
+                    <!--Image here--> 
+                </div>
+                <span class="nav__label">About Us</span>
+            </a>
+            <a href="/support-us" class="nav__link" data-link>
+                <div class="nav__icon-container">
+                    <img src="https://cdn.discordapp.com/attachments/707116378125107321/921434772021071932/aethonlogo.png"
+                    width="25px" height="25px">
+                </div>
+                <span class="nav__label">Support Us</span>
+            </a>
+            <a href="/discord" class="nav__link" data-link>
+                <div class="nav__icon-container">
+                    <!--Image here--> 
+                </div>
+                <span class="nav__label">Discord</span>
+            </a>
+        </nav>
+        <main class="main"></main>
+    </div>
+    <div id="app"></div>
+    <script type="module" src="/static/js/index.js"></script>
+    <script>
+        // Navigation
+        {
+          const collapsedClass = "nav--collapsed";
+          const lsKey = "navCollapsed";
+          const nav = document.querySelector(".nav");
+          const navBorder = nav.querySelector(".nav__border");
+          if (localStorage.getItem(lsKey) === "true") {
+            nav.classList.add(collapsedClass);
+          }
+          navBorder.addEventListener("click", () => {
+            nav.classList.toggle(collapsedClass);
+            localStorage.setItem(lsKey, nav.classList.contains(collapsedClass));
+          });
+        }
+      </script>
+</body>
+</html>
