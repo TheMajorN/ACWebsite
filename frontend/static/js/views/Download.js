@@ -9,7 +9,7 @@ export default class extends AbstractView {
     async getHtml() {
         return `
 
-            <h1>Download Page</h1>
+            <h1>When will the devs continue working on the game?????</h1>
 
         `;
     }
