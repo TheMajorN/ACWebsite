@@ -5,77 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aethon Collective</title>
     <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--Red bar across the top of the page containing nav links-->
     <div class="page-container">
-        <nav class="nav">
-            <div class="nav__border"></div>
+            <!--Unlinked List of content in the red bar at the top of the page-->
+            <ul>
 
-            <a href="/" class="nav__link" data-link>
-                <div class="nav__icon-container">
-                    <img src="https://cdn.discordapp.com/attachments/707116378125107321/921434772021071932/aethonlogo.png"
-                    width="25px" height="25px">
-                </div>
-                <span class="nav__label">Home</span>
-            </a>
+              <!--======Navigation links to separate pages======-->
+              <!-- Nav link to home page-->
+              <li><a href="/" class="nav__link" data-link>Home
+              </a></li>
 
-            <a href="/download" class="nav__link" data-link>
-                <div class="nav__icon-container">
-                    <img src="https://cdn.discordapp.com/attachments/707116378125107321/922532448259162182/iu.png"
-                    width="25px" height="25px">
-                </div>
-                <span class="nav__label">Download</span>
-            </a>
+              <!-- Nav link to download page -->
+              <li><a href="/download" class="nav__link" data-link>Download
+              </a></li>
 
-            <a href="/about-us" class="nav__link" data-link>
-                <div class="nav__icon-container">
-                    <img src="https://cdn.discordapp.com/attachments/707116378125107321/922532710541557770/iu.png"
-                    width="25px" height="25px">
-                </div>
-                <span class="nav__label">About Us</span>
-            </a>
+              <!-- Nav link to description page about the devs-->
+              <li><a href="/about-us" class="nav__link" data-link>About Us
+              </a></li>
 
-            <a href="/support-us" class="nav__link" data-link>
-                <div class="nav__icon-container">
-                    <img src="https://cdn.discordapp.com/attachments/707116378125107321/922533015375208519/iu.png"
-                    width="25px" height="25px">
-                </div>
-                <span class="nav__label">Support Us</span>
-            </a>
+              <!-- Nav link to the support page containing patreon tiers-->
+              <li><a href="/support-us" class="nav__link" data-link>Support Us
+              </a></li>
 
-            <a href="/discord" class="nav__link" data-link>
-                <div class="nav__icon-container">
-                    <img src="https://cdn.discordapp.com/attachments/707116378125107321/922532128049209355/discordlogo.png"
-                    width="25px" height="25px">
-                </div>
-                <span class="nav__label">Discord</span>
-            </a>
+              <div class="socials">
+              <!--======Social media widget links======-->
+              <!--Instagram-->
+              <li class="social"><a href="https://www.instagram.com/projectaethon/">
+                <img class="image" src="https://cdn.discordapp.com/attachments/748924844753551381/940044850366148628/insta.png"
+                height="25px" width="25px">
+              </a></li>
 
-        </nav>
+              <!--Discord-->
+              <li class="social"><a href="https://discord.gg/BDGSsqWH7h">
+                <img class="image" src="https://cdn.discordapp.com/attachments/748924844753551381/940044850093490236/dickscord.png"
+                height="25px" width="25px">
+              </a></li>
+
+              <!--Twitter-->
+              <li class="social"><a href="https://twitter.com/ProjectAethon">
+                <img class="image" src="https://cdn.discordapp.com/attachments/748924844753551381/940044850605219910/twitter.png"
+                height="25px" width="25px">
+              </a></li>
+
+              <!--Youtube-->
+              <li class="social"><a href="https://www.youtube.com/channel/UCUmCFoRyV3W_C18El6V65aQ">
+                <img class="image" src="https://cdn.discordapp.com/attachments/748924844753551381/940044850852667412/youTube.png"
+                height="25px" width="25px">
+              </a></li>
+            </div>
+
+            </ul>
         
+        <!--Background video setup to play in the top corner for atmosphere-->
         <video id="background-video" autoplay loop muted>
             <source src="https://cdn.discordapp.com/attachments/802397943402332221/931350222720884766/sigilchair6.mp4" type="video/mp4">
           </video>
 
         <main class="main"></main>
     </div>
+
+    <!--Gray background box to separate main content from flair margin-->
+    <div class="box"></div>
+
+    <!--Aethon logo in the flair margin-->
+    <div class="logo">
+      <img src="https://cdn.discordapp.com/attachments/707116378125107321/921434772021071932/aethonlogo.png">
+    </div>
+
+    <!--Aethon Collective title in the flair margin-->
+    <div class="title">
+      <img src="https://cdn.discordapp.com/attachments/823939153468588123/937821355901075486/aethon_collective.png">
+    </div>
+
+    <!--Actual content on the page-->
     <div id="app"></div>
+
     <script type="module" src="/static/js/index.js"></script>
+    
     <script>
-        // Navigation
-        {
-          const collapsedClass = "nav--collapsed";
-          const lsKey = "navCollapsed";
-          const nav = document.querySelector(".nav");
-          const navBorder = nav.querySelector(".nav__border");
-          if (localStorage.getItem(lsKey) === "true") {
-            nav.classList.add(collapsedClass);
-          }
-          navBorder.addEventListener("click", () => {
-            nav.classList.toggle(collapsedClass);
-            localStorage.setItem(lsKey, nav.classList.contains(collapsedClass));
-          });
-        }
-      </script>
+
+    </script>
+    
 </body>
 </html>
