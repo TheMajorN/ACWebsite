@@ -15,9 +15,9 @@ export default class extends AbstractView {
             position: absolute;
             left: 50%;
             transform: translate(-50%, -50%);
-            margin: 390px auto;
-            height: 300px;
-            width: 300px;
+            margin: 350px auto;
+            height: 200px;
+            width: 200px;
         }
 
         .intro {
@@ -26,8 +26,8 @@ export default class extends AbstractView {
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            width: 1200px;
-            height: 150px;
+            width: 700px;
+            height: 300px;
             padding: 10px 20px;
             color: white;
             background-color: #202020;
@@ -35,6 +35,34 @@ export default class extends AbstractView {
             border-radius: 30px;
             font-size: 24;
         }
+
+        @media only screen and (min-width: 769px) {
+            .time-image {
+                margin: 390px auto;
+                height: 300px;
+                width: 300px;
+            }
+
+            .intro {
+                width: 930px;
+                height: 150px;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .time-image {
+                margin: 390px auto;
+                height: 300px;
+                width: 300px;
+            }
+
+            .intro {
+                width: 1200px;
+                height: 150px;
+            } 
+        }
+
+
 
         </style>
 

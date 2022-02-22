@@ -13,11 +13,11 @@ export default class extends AbstractView {
 
             .container {
                 position: absolute;
-                left: 50%;
+                left: 45%;
                 transform: translate(-50%, -50%);
-                margin: 420px auto;
-                width: 1600px;
-                height: 340px;
+                margin: 1070px auto;
+                width: 600px;
+                height: 1600px;
             }
 
             .container .box {
@@ -104,12 +104,12 @@ export default class extends AbstractView {
 
             .intro {
                 position: absolute;
-                left: 50%;
+                left: 78%;
                 transform: translate(-50%, -50%);
-                margin: 670px auto;
+                margin: 655px auto;
                 text-align: left;
-                width: 1600px;
-                height: 150px;
+                width: 290px;
+                height: 450px;
                 padding: 10px 20px;
                 position: fixed;
                 color: white;
@@ -120,12 +120,12 @@ export default class extends AbstractView {
 
             .patreonbutton {
                 position: absolute;
-                margin: 820px auto;
+                margin: 355px auto;
                 padding: 15px auto;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                height: 80px;
-                width: 300px;
+                left: 65%;
+                transform: translate(0%, -50%);
+                height: 130px;
+                width: 150px;
                 text-decoration: none;
                 border-radius: 5px;
                 background: #410000;
@@ -134,6 +134,58 @@ export default class extends AbstractView {
                 border-color: black;
                 text-align: center;
                 font-size: 24px;
+            }
+
+            @media only screen and (min-width: 769px) {
+                .container {
+                    left: 32%;
+                    margin: 1050px auto;
+                    
+                }
+
+                .patreonbutton {
+                    position
+                    margin: 400px auto;
+                    left: 70%;
+                    transform: translate(-50%, -50%);
+                    height: 80px;
+                    width: 300px;
+                }
+
+                .intro {
+                    left: 70%;
+                    transform: translate(-50%, -50%);
+                    margin: 670px auto;
+                    text-align: left;
+                    width: 500px;
+                    height: 300px;
+                }
+            }
+
+            @media only screen and (min-width: 1024px) {
+                .container {
+                    left: 50%;
+                    margin: 420px auto;
+                    width: 1600px;
+                    height: 340px;
+                } 
+
+                .patreonbutton {
+                    margin: 820px auto;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: 80px;
+                    width: 300px;
+                }
+
+                .intro {
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 670px auto;
+                    text-align: left;
+                    width: 1600px;
+                    height: 150px;
+                }
             }
 
             </style>

@@ -7,16 +7,16 @@
 html,
 body {
     font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     background-color: black;
 }
 
 .page-container {
+    display: inline-flex;
     text-align: center;
     background: rgb(126, 20, 20);
     height: 40px;
     width: 100%;
-    margin: 0px 0px;
     z-index: 1;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .page-container ul li {
-    width: 150px;
+    width: 80px;
     height: 50px;
 }
 
@@ -39,8 +39,8 @@ body {
     color: whitesmoke;
     float: left;
     margin: 0px 5px;
-	padding: 7px 8px;
-	width: 145px;
+	padding: 12px 8px;
+	width: 90px;
 	height: 40px;
 	text-align: center; 
 	box-sizing: border-box;
@@ -51,7 +51,7 @@ body {
 .page-container ul .social {
     width: 25px;
     height: 25px;
-    padding: 7px 12px;
+    padding: 7px 5px;
     margin-left: 5px;
 }
 
@@ -63,7 +63,7 @@ body {
 
 .page-container ul .socials {
     display: inline-flex;
-    margin-left: 1050px;
+    margin-left: 5px;
 }
 
 .active, .page-container ul li a:hover {
@@ -86,6 +86,7 @@ body {
   }
 
   .logo img {
+      display: none;
       position: fixed;
       margin: 40px 50px;
       width: 150px;
@@ -93,6 +94,7 @@ body {
   }
 
   .title img {
+      display: none;
       position: fixed;
       margin: 40px 250px;
       height: 157px;
@@ -115,4 +117,66 @@ body {
     line-height: 1.5;
     font-weight: 500;
     color: whitesmoke;
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    .logo img {
+        display: block;
+    }
+  
+    .title img {
+        display: none;
+    }
+    .page-container ul li {
+        width: 150px;
+        height: 50px;
+    }
+
+    .page-container ul li a {
+        width: 145px;
+        padding: 7px 8px;
+    }
+
+    .page-container ul .socials {
+        margin-left: 140px;
+    }
+
+    .page-container ul .social {
+        width: 25px;
+        height: 25px;
+        padding: 7px 12px;
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .logo img {
+        display: block;
+    }
+  
+    .title img {
+        display: block;
+    }
+    .page-container ul li {
+        width: 150px;
+        height: 50px;
+    }
+
+    .page-container ul li a {
+        width: 145px;
+        padding: 7px 8px;
+    }
+
+    .page-container ul .socials {
+        margin-left: 56%;
+    }
 }

@@ -29,6 +29,7 @@ export default class extends AbstractView {
         }
 
         .pattern {
+            display: none;
             position: absolute;
             margin: 100px auto;
             top: 50%;
@@ -38,9 +39,10 @@ export default class extends AbstractView {
         }
 
         .topline {
+            display: none;
             background: white;
             height: 2px;
-            width: 1600px;
+            width: 10px;
             position: absolute;
             margin: -150px auto;
             top: 50%;
@@ -50,9 +52,10 @@ export default class extends AbstractView {
         }
 
         .bottomline {
+            display: none;
             background: white;
             height: 2px;
-            width: 1600px;
+            width: 10px;
             position: absolute;
             margin: 320px auto;
             top: 50%;
@@ -63,7 +66,7 @@ export default class extends AbstractView {
 
         h1 {
            font-size: 60px;
-           width: 1200px;
+           width: 600px;
            text-align: center;
            position: absolute;
            margin: -85px auto;
@@ -74,15 +77,62 @@ export default class extends AbstractView {
         }
 
         h2 {
-            font-size: 60px;
+            font-size: 36px;
             text-align: center;
             position: absolute;
             margin: 370px auto;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 1200px;
+            width: 500px;
             z-index: 0;
+         }
+
+         @media only screen and (min-width: 769px) {
+            .topline {
+                display: block;
+                width: 800px;
+            }
+    
+            .bottomline {
+                display: block;
+                width: 800px;
+            }
+            .pattern {
+                display: none;
+            }
+
+            h1 {
+                width: 700px;
+             }
+
+
+            h2 {
+                width: 700px;
+                font-size: 40px;
+             }
+         }
+
+         @media only screen and (min-width: 1024px) {
+            .pattern {
+                display: block;
+                position: absolute;
+                margin: 100px auto;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 0;
+            }
+
+            .topline {
+                display: block;
+                width: 1600px;
+            }
+    
+            .bottomline {
+                display: block;
+                width: 1600px;
+            }
          }
 
 

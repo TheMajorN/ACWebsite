@@ -13,16 +13,16 @@ export default class extends AbstractView {
 
         .container {
             position: absolute;
-            margin: 560px auto;
+            margin: 860px auto;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 960px;
-            height: 600px;
+            width: 580px;
+            height: 1200px;
         }
 
         .container .box {
             position: relative;
-            width: 300px;
+            width: 270px;
             height: 190px;
             background: #1f0000;
             float: left;
@@ -33,7 +33,7 @@ export default class extends AbstractView {
         }
 
         .container .box .icon {
-            margin: 50px 10px;
+            margin: 30px 10px;
             font-size: 44px;
             transition: 0.3s;
             text-align: center;
@@ -48,7 +48,7 @@ export default class extends AbstractView {
 
         .container .box .content h3 {
             text-align: center;
-            margin: -60px 10px;
+            margin: -40px 10px;
             opacity: 1;
             transition: 0.3s;
             font-size: 16px;
@@ -85,6 +85,50 @@ export default class extends AbstractView {
             margin: 0px 10px;
             opacity: 1;
             transition: 0.3s;
+        }
+
+        @media only screen and (min-width: 769px) {
+            .container {
+                width: 950px;
+                height: 600px;
+                margin: 560px auto;
+            }
+
+            .container .box {
+                position: relative;
+                width: 290px;
+                height: 190px;
+            }
+
+            .container .box .icon {
+                margin: 50px 10px;
+            }
+
+            .container .box .content h3 {
+                margin: -60px 10px;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .container {
+                width: 960px;
+                height: 600px;
+                margin: 560px auto;
+            }
+
+            .container .box {
+                position: relative;
+                width: 300px;
+                height: 190px;
+            }
+
+            .container .box .icon {
+                margin: 50px 10px;
+            }
+
+            .container .box .content h3 {
+                margin: -60px 10px;
+            }
         }
 
         </style>
